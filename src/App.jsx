@@ -90,7 +90,7 @@ function Skills() {
 function ProjectCard({ project }) {
   return (
     <article className="project-card"><div className="project-preview">
-      {project.video ? <video className="project-video" src={project.video} autoPlay muted loop playsInline preload="metadata" aria-label={`${project.title} project video`} /> : <div className="video-empty"><span className="video-kicker">PROJECT VIDEO</span><strong>{project.title}</strong><span className="video-empty-copy">No preview video added yet</span></div>}
+      {project.video ? <video className="project-video" src={project.video} poster={project.poster} autoPlay muted loop playsInline preload="auto" aria-label={`${project.title} project video`} /> : <div className="video-empty"><span className="video-kicker">PROJECT VIDEO</span><strong>{project.title}</strong><span className="video-empty-copy">No preview video added yet</span></div>}
     </div>
       <div className="project-info"><div className="project-top"><span className="project-number">PROJECT / {project.number}</span><div className="tech-list">{project.stack.map((tech) => <span key={tech}>{tech}</span>)}</div></div>
         <h3>{project.title} <span>— {project.subtitle}</span></h3><p className="project-description">{project.description}</p>
